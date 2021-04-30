@@ -38,6 +38,7 @@ function checkDatabase() {
     // get all records from store and set to a variable
     const getAll = store.getAll();
     
+    // Sends information from IndexDb to MongoDB
     getAll.onsuccess = function() {
         if (getAll.result.length > 0) {
             fetch('/api/transaction/bulk', {
