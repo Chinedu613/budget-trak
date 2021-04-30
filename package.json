@@ -1,6 +1,9 @@
 {
   "name": "Budget-trak",
   "version": "1.0.0",
+  "engines": {
+    "node":"14.x"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -9,6 +12,7 @@
     "start:dev": "concurrently \"npm run server\" \"cd public && npm run start\"",
     "server": "nodemon server.js --ignore public",
     "build": "cd public && npm run build",
+    "heroku-postbuild": "echo Skip build on Heroku",
     "install": "cd public && npm install",
     "public": "cd public && npm start"
   },
